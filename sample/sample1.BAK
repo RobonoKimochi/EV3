@@ -1,4 +1,4 @@
-/* 
+/*  
  *
  *  TOPPERS/HRP Kernel
  *      Toyohashi Open Platform for Embedded Real-Time Systems/
