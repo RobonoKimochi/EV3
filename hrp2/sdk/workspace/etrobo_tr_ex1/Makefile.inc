@@ -6,7 +6,9 @@ APPL_CXXOBJS += \
 	BalancingWalker.o \
 	LineMonitor.o \
 	BalancerCpp.o \
-	LineTracer.o
+	Starter.o \
+	LineTracer.o \
+	LineTracerWithStarter.o
 
 SRCLANG := c++
 

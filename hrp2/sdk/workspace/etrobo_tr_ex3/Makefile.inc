@@ -4,9 +4,14 @@ APPL_COBJS += balancer.o balancer_param.o
 
 APPL_CXXOBJS += \
 	BalancingWalker.o \
-	LineMonitor.o \
 	BalancerCpp.o \
-	LineTracer.o
+	LineTracer.o \
+	Scenario.o \
+	ScenarioTracer.o \
+	RandomWalker.o \
+	LineMonitor.o \
+	Starter.o \
+	SimpleTimer.o
 
 SRCLANG := c++
 
