@@ -1538,59 +1538,65 @@ const char TOPPERS_cfg_valueof_module_255[] = "ev3api_speaker.o"; /* #include "a
 #ifndef TOPPERS_cfg_valueof_TDOM_APP_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_APP_DEFINED 1
 
-#line 5 "../workspace/etrobo_tr/app.cfg"
+#line 5 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_APP = TDOM_APP;
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_APP
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_256 = ( unsigned_t ) ( TDOM_APP );
-#line 6 "../workspace/etrobo_tr/app.cfg"
+#line 6 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_256 = 256;
 #define MAIN_TASK	(<>)
 
-#line 6 "../workspace/etrobo_tr/app.cfg"
+#line 6 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_valueof_tskatr_256 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_256 = ( signed_t )( MAIN_PRIORITY ); const unsigned_t TOPPERS_cfg_valueof_stksz_256 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_257 = ( unsigned_t ) ( TDOM_APP );
-#line 7 "../workspace/etrobo_tr/app.cfg"
+#line 7 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_257 = 257;
 #define TRACER_TASK	(<>)
 
-#line 7 "../workspace/etrobo_tr/app.cfg"
+#line 7 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_valueof_tskatr_257 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_257 = ( signed_t )( TRACER_PRIORITY ); const unsigned_t TOPPERS_cfg_valueof_stksz_257 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_258 = ( unsigned_t ) ( TDOM_APP );
-#line 9 "../workspace/etrobo_tr/app.cfg"
+#line 9 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_258 = 258;
 #define EV3_CYC_TRACER	(<>)
 
-#line 9 "../workspace/etrobo_tr/app.cfg"
+#line 9 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_valueof_cycatr_258 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_cyctim_258 = ( unsigned_t )( 4 ); const unsigned_t TOPPERS_cfg_valueof_cycphs_258 = ( unsigned_t )( 1 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_APP
 
-#line 10 "../workspace/etrobo_tr/app.cfg"
+#line 10 "../workspace/etrobo_tr_ex1/app.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_APP
 
 
-#line 12 "../workspace/etrobo_tr/app.cfg"
+#line 12 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_259 = 259;
 const char TOPPERS_cfg_valueof_module_259[] = "app.o"; 
-#line 13 "../workspace/etrobo_tr/app.cfg"
+#line 13 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_260 = 260;
 const char TOPPERS_cfg_valueof_module_260[] = "balancer.o"; 
-#line 14 "../workspace/etrobo_tr/app.cfg"
+#line 14 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_261 = 261;
 const char TOPPERS_cfg_valueof_module_261[] = "balancer_param.o"; 
-#line 16 "../workspace/etrobo_tr/app.cfg"
+#line 16 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_262 = 262;
 const char TOPPERS_cfg_valueof_module_262[] = "LineTracer.o"; 
-#line 17 "../workspace/etrobo_tr/app.cfg"
+#line 17 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_263 = 263;
-const char TOPPERS_cfg_valueof_module_263[] = "BalancingWalker.o"; 
-#line 18 "../workspace/etrobo_tr/app.cfg"
+const char TOPPERS_cfg_valueof_module_263[] = "LineTracerWithStarter.o"; 
+#line 18 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_264 = 264;
-const char TOPPERS_cfg_valueof_module_264[] = "BalancerCpp.o"; 
-#line 19 "../workspace/etrobo_tr/app.cfg"
+const char TOPPERS_cfg_valueof_module_264[] = "BalancingWalker.o"; 
+#line 19 "../workspace/etrobo_tr_ex1/app.cfg"
 const unsigned_t TOPPERS_cfg_static_api_265 = 265;
-const char TOPPERS_cfg_valueof_module_265[] = "LineMonitor.o"; 
+const char TOPPERS_cfg_valueof_module_265[] = "BalancerCpp.o"; 
+#line 20 "../workspace/etrobo_tr_ex1/app.cfg"
+const unsigned_t TOPPERS_cfg_static_api_266 = 266;
+const char TOPPERS_cfg_valueof_module_266[] = "LineMonitor.o"; 
+#line 21 "../workspace/etrobo_tr_ex1/app.cfg"
+const unsigned_t TOPPERS_cfg_static_api_267 = 267;
+const char TOPPERS_cfg_valueof_module_267[] = "Starter.o"; 
 #ifdef TOPPERS_cfg_inside_of_TDOM_KERNEL
 #error missing '}'
 #endif

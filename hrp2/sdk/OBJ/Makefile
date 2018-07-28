@@ -6,7 +6,7 @@
 KERNELDIR = ../..
 TARGETDIR = $(KERNELDIR)/target/ev3_gcc
 LOADERDIR = $(KERNELDIR)/target/ev3_gcc/dmloader
-APPLDIR   = ../workspace/etrobo_tr
+APPLDIR   = ../workspace/etrobo_tr_ex1
 APPL_DIR  = $(APPLDIR)
 SRCDIRS  += $(APPL_DIR) $(KERNELDIR)/target/ev3_gcc/TLSF-2.4.6/src
 
@@ -18,8 +18,8 @@ include ../common/Makefile.prj.common
 # Compiler options
 COPTS += -DBUILD_MODULE
 GCC_TARGET = arm-none-eabi
-INCLUDES += -I../workspace/etrobo_tr \
-			-I../workspace/etrobo_tr/../common \
+INCLUDES += -I../workspace/etrobo_tr_ex1 \
+			-I../workspace/etrobo_tr_ex1/../common \
 			-I$(LOADERDIR)/app \
 			-I$(KERNELDIR)/target/ev3_gcc \
 			-I$(KERNELDIR)/target/ev3_gcc/drivers/common/include \
@@ -39,7 +39,7 @@ all: $(OBJFILE)
 
 MODOBJS += t_perror.o strerror.o vasyslog.o tlsf.o
 
-MODCFG = ../workspace/etrobo_tr/app.cfg
+MODCFG = ../workspace/etrobo_tr_ex1/app.cfg
 
 MODDIR = $(PWD)
 
@@ -50,7 +50,7 @@ OMIT_DEBUG_INFO = 1
 #
 BUILD_LOADABLE_MODULE = 1
 CONFIG_EV3RT_APPLICATION = 1
-include ../workspace/etrobo_tr/Makefile.inc
+include ../workspace/etrobo_tr_ex1/Makefile.inc
 ifeq ($(SRCLANG),c++)
   USE_CXX = true
   APPL_CXXOBJS += app.o 
