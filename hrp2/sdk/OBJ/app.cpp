@@ -5,12 +5,9 @@
  *  Author: Kazuhiro.Kawachi
  *  Copyright (c) 2015 Embedded Technology Software Design Robot Contest
  *****************************************************************************/
-#include "ev3api.h"
+
 #include "app.h"
 #include "LineTracer.h"
-#include "LineTracerWithStarter.h"
-#include "TailMotor.h"
-#include "TailStand.h"
 
 // デストラクタ問題の回避
 // https://github.com/ETrobocon/etroboEV3/wiki/problem_and_coping
@@ -20,7 +17,6 @@ void *__dso_handle=0;
 using ev3api::ColorSensor;
 using ev3api::GyroSensor;
 using ev3api::Motor;
-using ev3api::TouchSensor;
 
 // Device objects
 // オブジェクトを静的に確保する
@@ -28,18 +24,12 @@ ColorSensor gColorSensor(PORT_3);
 GyroSensor  gGyroSensor(PORT_4);
 Motor       gLeftWheel(PORT_C);
 Motor       gRightWheel(PORT_B);
-Motor       gTailMotor(PORT_D);
-TailMotor   gTailMotorController(gTailMotor);
-TouchSensor gTouchSensor(PORT_1);
 
 // オブジェクトの定義
 static LineMonitor     *gLineMonitor;
 static Balancer        *gBalancer;
 static BalancingWalker *gBalancingWalker;
 static LineTracer      *gLineTracer;
-static LineTracerWithStarter *gLineTracerWithStarter;
-static Starter *gStarter;
-static TailStand *gTailStand;
 
 /**
  * EV3システム生成
@@ -53,9 +43,6 @@ static void user_system_create() {
                                            gBalancer);
     gLineMonitor     = new LineMonitor(gColorSensor);
     gLineTracer      = new LineTracer(gLineMonitor, gBalancingWalker);
-    gStarter         = new Starter(gTouchSensor);
-    gLineTracerWithStarter = new LineTracerWithStarter(gLineTracer, gStarter);
-    gTailStand = new TailStand(&gTailMotorController, gStarter);
 
     // 初期化完了通知
     ev3_led_set_color(LED_ORANGE);
@@ -72,8 +59,6 @@ static void user_system_destroy() {
     delete gLineMonitor;
     delete gBalancingWalker;
     delete gBalancer;
-    delete gStarter;
-    delete gLineTracerWithStarter;
 }
 
 /**
@@ -81,10 +66,6 @@ static void user_system_destroy() {
  */
 void ev3_cyc_tracer(intptr_t exinf) {
     act_tsk(TRACER_TASK);
-}
-
-void ev3_cyc_log(intptr_t exinf) {
-
 }
 
 /**
@@ -113,10 +94,8 @@ void tracer_task(intptr_t exinf) {
     if (ev3_button_is_pressed(BACK_BUTTON)) {
         wup_tsk(MAIN_TASK);  // バックボタン押下
     } else {
-        gLineTracerWithStarter->run();  // 倒立走行
-        //gTailStand->run();
+        gLineTracer->run();  // 倒立走行
     }
 
     ext_tsk();
 }
-
