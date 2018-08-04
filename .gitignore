@@ -1,2 +1,4 @@
 sdcard/
 hrp2/sdk/OBJ/
+*.o
+
