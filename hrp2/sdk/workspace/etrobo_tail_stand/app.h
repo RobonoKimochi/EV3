@@ -42,3 +42,4 @@ extern void ev3_cyc_log(intptr_t exinf);
 #ifdef __cplusplus
 }
 #endif
+/*お試しその２*/
